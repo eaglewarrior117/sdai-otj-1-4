@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website with Navigation</title>
+    <title>Dev dish</title>
     <style>
         /* Basic Styling for Navbar */
         body {
@@ -56,68 +56,66 @@
 </head>
 <body>
 
-<!-- Navbar -->
-<nav>
-    <a href="#" onclick="showSection('menu')">Menu</a>
-    <a href="#" onclick="showSection('about')">About Us</a>
-    <a href="#" onclick="showSection('dev-favorites')">Dev Favorites</a>
-    <a href="#" onclick="showSection('location')">Location</a>
-    <a href="#" onclick="showSection('hours')">Hours</a>
-</nav>
+    <!-- Navbar -->
+    <nav>
+        <a href="#" onclick="showSection('menu')">Menu</a>
+        <a href="#" onclick="showSection('about')">About Us</a>
+        <a href="#" onclick="showSection('dev-favorites')">Dev Favorites</a>
+        <a href="#" onclick="showSection('location')">Location</a>
+        <a href="#" onclick="showSection('hours')">Hours</a>
+    </nav>
 
-<!-- Sections -->
-<section id="menu" class="active">
-     <!-- Home Header Image -->
-     <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="home-header-image">
-    <h1>Welcome to Our Site</h1>
-    <p>This is the homepage. Use the navigation to learn more about us.</p>
-</section>
+    <!-- Sections -->
+    <section id="menu" class="active">
+        <!-- Home Header Image -->
+        <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="home-header-image">
+        <h1>Welcome to Our Site</h1>
+        <p>This is the homepage. Use the navigation to learn more about us.</p>
+    </section>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>Welcome to our website! We are passionate about [describe purpose or business focus].</p>
-</section>
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to our website! We are passionate about [describe purpose or business focus].</p>
+    </section>
 
-<section id="dev-favorites">
-    <h2>Dev Favorites</h2>
-    <p>Here are some of our favorite development tools and resources:</p>
-    <ul>
-        <li>Tool 1: Description</li>
-        <li>Tool 2: Description</li>
-        <li>Tool 3: Description</li>
-    </ul>
-</section>
+    <section id="dev-favorites">
+        
+        <h2>Dev Favorites</h2>
+        <p>Here are some of our favorite development tools and resources:</p>
+        <ul>
+            <li>Tool 1: Description</li>
+            <li>Tool 2: Description</li>
+            <li>Tool 3: Description</li>
+        </ul>
+    </section>
 
-<section id="location">
-    <h2>Location</h2>
-    <p>We are located at [address here].</p>
-</section>
+    <section id="location">
+        <h2>Location</h2>
+        <p>We are located at [address here].</p>
+    </section>
 
-<section id="hours">
-    <h2>Hours</h2>
-    <p>We are open:</p>
-    <ul>
-        <li>Monday - Friday: 9 AM - 5 PM</li>
-        <li>Saturday: 10 AM - 3 PM</li>
-        <li>Sunday: Closed</li>
-    </ul>
-</section>
+    <section id="hours">
+        <h2>Hours</h2>
+        <p>We are open:</p>
+        <ul>
+            <li>Monday - Friday: 9 AM - 5 PM</li>
+            <li>Saturday: 10 AM - 3 PM</li>
+            <li>Sunday: Closed</li>
+        </ul>
+    </section>
 
-<!-- JavaScript for Section Navigation -->
-<script>
-    function showSection(sectionId) {
-        // Hide all sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.remove('active');
-        });
+    <!-- JavaScript for Section Navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.remove('active');
+            });
 
-        // Show the selected section
-        document.getElementById(sectionId).classList.add('active');
-    }
-</script>
-
-</body>
-</html>
+            // Show the selected section
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
