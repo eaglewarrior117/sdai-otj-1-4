@@ -4,23 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Dish Food Truck & Restaurant</title>
-    
-</head>
-<body>
-    <h1>Dev Dish Food truck & restruant</h1>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev dish</title>
     <style>
-        /* Basic Styling for Navbar */
+        /* Basic Styling */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
         }
+
+        /* Navbar Styling */
         nav {
             background-color: #333;
             overflow: hidden;
@@ -36,6 +28,7 @@
         nav a:hover {
             background-color: #575757;
         }
+
         /* Section Styling */
         section {
             padding: 20px;
@@ -44,12 +37,19 @@
         section.active {
             display: block; /* Display the active section */
         }
-        /* Styling for the header image in the home section */
-        .home-header-image {
+
+        /* Div Container Styling */
+        .hero-container, .about-container, .favorites-container, .location-container, .hours-container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+
+        /* Image Styling for Hero and About Us */
+        .hero-image {
             width: 100%;
-            height: 300px; /* Adjust height as needed */
-            object-fit: cover; /* Ensures image fills the space */
-            object-position: 0 70%; /* Focuses on the desired part of the image */
+            height: 300px;
+            object-fit: cover;
             margin-bottom: 30px;
         }
     </style>
@@ -65,47 +65,61 @@
         <a href="#" onclick="showSection('hours')">Hours</a>
     </nav>
 
-    <!-- Sections -->
+    <!-- Hero Section -->
     <section id="menu" class="active">
-        <!-- Home Header Image -->
-        <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="home-header-image">
-        <h1>Welcome to Our Site</h1>
-        <p>This is the homepage. Use the navigation to learn more about us.</p>
+        <div class="hero-container">
+            <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="hero-image">
+            <h1>Welcome to Our Site</h1>
+            <p>This is the homepage. Use the navigation to learn more about us.</p>
+        </div>
     </section>
 
+    <!-- About Us Section -->
     <section id="about">
-        <!--Home Header Image -->
-        <img src="./assets/images/cesar-bretana-gonzalez-a3dhUC7EhYg-unsplash.jpg" alth="food bus"
-        <h2>About Us</h2>
-        <p>What's so great about combining the worlds of coding and cuisine? Dev Dish was 
-        founded by two passionate developers who turned their love for software into a culinary adventure. 
-        After years of coding by day and cooking by night, they decided to merge their two passions and create something extraordinary.</p>
+        <div class="about-container">
+            <!-- Image Div for About Us -->
+            <div class="about-image-container">
+                <img src="./assets/images/cesar-bretana-gonzalez-a3dhUC7EhYg-unsplash.jpg" alt="food bus" class="hero-image">
+            </div>
+            <h2>About Us</h2>
+            <p>What's so great about combining the worlds of coding and cuisine? Dev Dish was 
+            founded by two passionate developers who turned their love for software into a culinary adventure. 
+            After years of coding by day and cooking by night, they decided to merge their two passions and create something extraordinary.</p>
+        </div>
     </section>
 
+    <!-- Dev Favorites Section -->
     <section id="dev-favorites">
-        
-        <h2>Dev Favorites</h2>
-        <p>Here are some of our favorite development tools and resources:</p>
-        <ul>
-            <li>Tool 1: Description</li>
-            <li>Tool 2: Description</li>
-            <li>Tool 3: Description</li>
-        </ul>
+        <div class="favorites-container">
+            <h2>Dev Favorites</h2>
+            <p>Here are some of our favorite development tools and resources:</p>
+            <ul>
+                <li>Tool 1: Description</li>
+                <li>Tool 2: Description</li>
+                <li>Tool 3: Description</li>
+            </ul>
+        </div>
     </section>
 
+    <!-- Location Section -->
     <section id="location">
-        <h2>Location</h2>
-        <p>We are located at [address here].</p>
+        <div class="location-container">
+            <h2>Location</h2>
+            <p>We are located at [address here].</p>
+        </div>
     </section>
 
+    <!-- Hours Section -->
     <section id="hours">
-        <h2>Hours</h2>
-        <p>We are open:</p>
-        <ul>
-            <li>Monday - Friday: 9 AM - 5 PM</li>
-            <li>Saturday: 10 AM - 3 PM</li>
-            <li>Sunday: Closed</li>
-        </ul>
+        <div class="hours-container">
+            <h2>Hours</h2>
+            <p>We are open:</p>
+            <ul>
+                <li>Monday - Friday: 9 AM - 5 PM</li>
+                <li>Saturday: 10 AM - 3 PM</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
     </section>
 
     <!-- JavaScript for Section Navigation -->
