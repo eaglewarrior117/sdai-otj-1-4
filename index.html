@@ -29,7 +29,52 @@
             background-color: #575757;
         }
 
-        /* Section Styling */
+        /* Menu Dropdown Styling to Match Navbar */
+        .menu-container {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            border-bottom: 1px solid #ddd;
+        }
+        .menu-category {
+            position: relative;
+            padding: 14px 20px;
+            color: white;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        .menu-category:hover {
+            background-color: #575757;
+        }
+
+        /* Dropdown Content Styling */
+        .menu-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #333;
+            min-width: 200px;
+            border: 1px solid #575757;
+            z-index: 1;
+        }
+        .menu-content p {
+            color: white;
+            padding: 10px;
+            margin: 0;
+            border-top: 1px solid #575757;
+        }
+        .menu-content p:hover {
+            background-color: #444;
+        }
+
+        /* Display dropdown content on hover */
+        .menu-category:hover .menu-content {
+            display: block;
+        }
+
+        /* Other Sections Styling */
         section {
             padding: 20px;
             display: none; /* Hide sections by default */
@@ -37,19 +82,16 @@
         section.active {
             display: block; /* Display the active section */
         }
-
-        /* Div Container Styling */
         .hero-container, .about-container, .favorites-container, .location-container, .hours-container {
             margin: 20px;
             padding: 20px;
             border: 1px solid #ddd;
         }
-
-        /* Image Styling for Hero and About Us */
         .hero-image {
             width: 100%;
             height: 300px;
             object-fit: cover;
+            object-position: 0 70%;
             margin-bottom: 30px;
         }
     </style>
@@ -65,11 +107,39 @@
         <a href="#" onclick="showSection('hours')">Hours</a>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Menu Section with Dropdown Structure -->
     <section id="menu" class="active">
+        <div class="menu-container">
+            <!-- Wraps Category -->
+            <div class="menu-category">
+                Wraps
+                <div class="menu-content">
+                    <p>Function Fries: Buffalo chicken, romaine lettuce, tomatoes, carrots, ranch, blue cheese</p>
+                    <p>Loop Wrap (Vegetarian): Hummus, romaine lettuce, sun-dried tomatoes, Kalamata olives, feta cheese, tzatziki sauce</p>
+                    <p>Stack Overflow: Jalapeno tortilla, turkey chili, onions, cheddar cheese, avocado</p>
+                    <p>Recursive Roll: Smoked salmon, cream cheese, cucumber, dill, and baby spinach</p>
+                    <p>Binary Bites: Marinated pork, pickled carrots, cucumber, cilantro, mint, fresno chiles, mayonnaise</p>
+                    <p>Git Wrap (Vegetarian): Falafel, red onion, romaine lettuce, tomato, and tzatziki sauce</p>
+                    <p><em>Note: All wraps, except Stack Overflow, are served on your choice of flour or corn tortilla.</em></p>
+                </div>
+            </div>
+
+            <!-- Sides Category -->
+            <div class="menu-category">
+                Sides
+                <div class="menu-content">
+                    <p>Bug-Free Fries: Just a side of fries</p>
+                    <p>Three-Layer Cheese Fries: Fries topped with havarti and dill cheese, pastrami, Russian dressing, pickled onions and peppers, pickled jalapeno</p>
+                    <p>Golden Ratio Fries: Fries topped with havarti and dill cheese, pastrami, Russian dressing, pickled onions and peppers, pickled jalapeno</p>
+                    <p>Compile Chips: Tortilla chips and salsa verde</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
         <div class="hero-container">
             <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="hero-image">
-            <h1>Welcome to Our Site</h1>
+            <h1>The Dev Dish Quarterly Menu</h1>
             <p>This is the homepage. Use the navigation to learn more about us.</p>
         </div>
     </section>
@@ -77,7 +147,6 @@
     <!-- About Us Section -->
     <section id="about">
         <div class="about-container">
-            <!-- Image Div for About Us -->
             <div class="about-image-container">
                 <img src="./assets/images/cesar-bretana-gonzalez-a3dhUC7EhYg-unsplash.jpg" alt="food bus" class="hero-image">
             </div>
@@ -85,6 +154,14 @@
             <p>What's so great about combining the worlds of coding and cuisine? Dev Dish was 
             founded by two passionate developers who turned their love for software into a culinary adventure. 
             After years of coding by day and cooking by night, they decided to merge their two passions and create something extraordinary.</p>
+            <p>Dev Dish brings a unique twist to the food truck scene,
+            offering a menu full of creative, tech-inspired dishes.
+            Whether you're a tech enthusiast or a food lover,
+            our offerings are designed to satisfy both your appetite and your curiosity.</p>
+            <p>Dev Dish is the brainchild of Alex and Jamie,
+            two friends who met at a hackathon and discovered a shared love for innovative cuisine.
+            With a background in software development and a knack for culinary creativity,
+            they embarked on a journey to deliver delicious, tech-themed dishes to the community.</p>
         </div>
     </section>
 
@@ -125,12 +202,9 @@
     <!-- JavaScript for Section Navigation -->
     <script>
         function showSection(sectionId) {
-            // Hide all sections
             document.querySelectorAll('section').forEach(section => {
                 section.classList.remove('active');
             });
-
-            // Show the selected section
             document.getElementById(sectionId).classList.add('active');
         }
     </script>
