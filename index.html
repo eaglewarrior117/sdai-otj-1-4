@@ -10,6 +10,9 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Navbar Styling */
@@ -29,7 +32,7 @@
             background-color: #575757;
         }
 
-        /* Menu Dropdown Styling to Match Navbar */
+        /* Menu Dropdown Styling */
         .menu-container {
             display: flex;
             justify-content: center;
@@ -59,6 +62,9 @@
             border: 1px solid #575757;
             z-index: 1;
         }
+        .menu-category:hover .menu-content {
+            display: block;
+        }
         .menu-content p {
             color: white;
             padding: 10px;
@@ -69,12 +75,7 @@
             background-color: #444;
         }
 
-        /* Display dropdown content on hover */
-        .menu-category:hover .menu-content {
-            display: block;
-        }
-
-        /* Other Sections Styling */
+        /* Section Styling */
         section {
             padding: 20px;
             display: none; /* Hide sections by default */
@@ -94,6 +95,45 @@
             object-position: 0 70%;
             margin-bottom: 30px;
         }
+
+        /* Hours Section Styling */
+        .hours-container ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+        }
+        .hours-container li {
+            padding: 5px 0;
+        }
+        .hours-container li span:first-child {
+            font-weight: bold;
+            display: inline-block;
+            width: 100px; /* Adjust width as needed for alignment */
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: auto;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
     </style>
 </head>
 <body>
@@ -107,7 +147,7 @@
         <a href="#" onclick="showSection('hours')">Hours</a>
     </nav>
 
-    <!-- Menu Section with Dropdown Structure -->
+    <!-- Menu Section -->
     <section id="menu" class="active">
         <div class="menu-container">
             <!-- Wraps Category -->
@@ -139,7 +179,7 @@
         <!-- Hero Section -->
         <div class="hero-container">
             <img src="./assets/images/pexels-edwardeyer-1247755.jpg" alt="serving customers sliders" class="hero-image">
-            <h1>The Dev Dish Quarterly Menu</h1>
+            <h1>Welcome to Our Site</h1>
             <p>This is the homepage. Use the navigation to learn more about us.</p>
         </div>
     </section>
@@ -155,26 +195,20 @@
             founded by two passionate developers who turned their love for software into a culinary adventure. 
             After years of coding by day and cooking by night, they decided to merge their two passions and create something extraordinary.</p>
             <p>Dev Dish brings a unique twist to the food truck scene,
-            offering a menu full of creative, tech-inspired dishes.
-            Whether you're a tech enthusiast or a food lover,
+            offering a menu full of creative, tech-inspired dishes. Whether you're a tech enthusiast or a food lover,
             our offerings are designed to satisfy both your appetite and your curiosity.</p>
-            <p>Dev Dish is the brainchild of Alex and Jamie,
-            two friends who met at a hackathon and discovered a shared love for innovative cuisine.
-            With a background in software development and a knack for culinary creativity,
-            they embarked on a journey to deliver delicious, tech-themed dishes to the community.</p>
+            <p>Dev Dish is the brainchild of Alex and Jamie, two friends who met at a hackathon and discovered a shared love for innovative cuisine.
+            With a background in software development and a knack for culinary creativity, they embarked on a journey to deliver delicious,
+            tech-themed dishes to the community.</p>
         </div>
     </section>
 
     <!-- Dev Favorites Section -->
     <section id="dev-favorites">
         <div class="favorites-container">
-            <h2>Dev Favorites</h2>
-            <p>Here are some of our favorite development tools and resources:</p>
-            <ul>
-                <li>Tool 1: Description</li>
-                <li>Tool 2: Description</li>
-                <li>Tool 3: Description</li>
-            </ul>
+            <h2>The Developer's Favorites</h2>
+            <p> Enjoy Dev Dish fan favorite menu items at local events or 
+            book us for a visit to your neighborhood or for your special occasion.</p>
         </div>
     </section>
 
@@ -182,7 +216,7 @@
     <section id="location">
         <div class="location-container">
             <h2>Location</h2>
-            <p>We are located at [address here].</p>
+            <p>511 Tristin Isle Park Hudsonton, Michigan.</p>
         </div>
     </section>
 
@@ -190,24 +224,44 @@
     <section id="hours">
         <div class="hours-container">
             <h2>Hours</h2>
-            <p>We are open:</p>
             <ul>
-                <li>Monday - Friday: 9 AM - 5 PM</li>
-                <li>Saturday: 10 AM - 3 PM</li>
-                <li>Sunday: Closed</li>
+                <li><span>Monday:</span> <span>10am - 7pm</span></li>
+                <li><span>Tuesday:</span> <span>10am - 7pm</span></li>
+                <li><span>Wednesday:</span> <span>10am - 7pm</span></li>
+                <li><span>Thursday:</span> <span>10am - 10pm</span></li>
+                <li><span>Friday:</span> <span>10am - 9pm</span></li>
+                <li><span>Saturday:</span> <span>12pm - 11pm</span></li>
+                <li><span>Sunday:</span> <span>12pm - 11pm</span></li>
             </ul>
         </div>
     </section>
 
-    <!-- JavaScript for Section Navigation -->
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.remove('active');
-            });
-            document.getElementById(sectionId).classList.add('active');
-        }
-    </script>
+<!-- Footer Section with Social Media Icons -->
+<footer>
+    <p>&copy; 2024 Dev Dish Food Truck & Restaurant</p>
+    <p>123 Foodie Lane, Culinary City, CC 12345</p>
+    <p>Contact us at <a href="mailto:info@devdish.com">info@devdish.com</a> | Phone: (123) 456-7890</p>
+    <p>Follow us on:
+        <span class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook" width="24" height="24"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter" width="24" height="24"></a>
+            <a href="https://www.instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram" width="24" height="24"></a>
+        </span>
+    </p>
+</footer>
+
+<!-- JavaScript for Section Navigation -->
+<script>
+    function showSection(sectionId) {
+        // Hide all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.remove('active');
+        });
+        
+        // Show the selected section
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
