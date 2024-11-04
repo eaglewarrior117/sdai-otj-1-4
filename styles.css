@@ -1,0 +1,171 @@
+ /* Basic Styling */
+ body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    overflow: hidden;
+}
+nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #575757;
+}
+
+/* Menu Dropdown Styling */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    border-bottom: 1px solid #ddd;
+}
+.menu-category {
+    position: relative;
+    padding: 14px 20px;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.menu-category:hover {
+    background-color: #575757;
+}
+
+/* Dropdown Content Styling */
+.menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    border: 1px solid #575757;
+    z-index: 1;
+}
+.menu-category:hover .menu-content {
+    display: block;
+}
+.menu-content p {
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-top: 1px solid #575757;
+    line-height: 1em;
+}
+.menu-content p:hover {
+    background-color: #444;
+}
+
+/* Section Styling */
+section {
+    padding: 20px;
+    display: none; /* Hide sections by default */
+}
+section.active {
+    display: block; /* Display the active section */
+}
+.hero-container, .about-container, .favorites-container, .location-container, .hours-container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+.hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: 0 70%;
+    margin-bottom: 30px;
+}
+
+/* Centered Menu Title Styling */
+.menu-title {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+/* Hours Section Styling */
+.hours-container ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+}
+.hours-container li {
+    padding: 5px 0;
+}
+.hours-container li span:first-child {
+    font-weight: bold;
+    display: inline-block;
+    width: 100px; /* Adjust width as needed for alignment */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    vertical-align: middle;
+}
+
+h1 {
+    color: black;
+    size: 30px;
+    margin-left: 30px;
+}
+
+
+h2 {
+    color: black;
+    size: 30px;
+    margin-left: 40px;
+}
+
+
+h3 {
+    color: rgb(255, 255, 255);
+    size: 30px;
+    margin-left: 50px;
+}
+
+
+
+
+
+
+
+
+.menu-title {
+    color: black;
+    font-style: italic;
+    text-align: center;
+}
