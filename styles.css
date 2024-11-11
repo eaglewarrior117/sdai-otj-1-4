@@ -111,6 +111,54 @@ section.active {
     display: inline-block;
     width: 100px; /* Adjust width as needed for alignment */
 }
+/* Deve favorites Image styling */
+/* Container for the entire Dev Favorites section */
+#dev-favorites {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Grid container for images */
+.favorites-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Sets grid to have three equal-width columns */
+    gap: 20px; /* Adds space between images */
+    width: 100%; /* Ensures the grid spans the full width of the page */
+}
+
+/* Style for each image */
+.favorite-image {
+    width: 100%;                   /* Full width of each grid cell */
+    height: 300px;                 /* Fixed height for uniformity */
+    object-fit: cover;             /* Ensures image fills the cell without distortion */
+    object-position: center;       /* Centers the focal point of the image */
+    border-radius: 8px;            /* Adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+/* Hover effect for images */
+.favorite-image:hover {
+    transform: scale(1.03); /* Slight zoom on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .favorites-images {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .favorites-images {
+        grid-template-columns: 1fr; /* Stacks images on smaller screens */
+    }
+    .favorite-image {
+        height: 200px; /* Adjusts height for better fit on small screens */
+    }
+}
+
+
 
 /* Footer Styling */
 footer {
